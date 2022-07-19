@@ -49,13 +49,13 @@ export default function Products({ submitTarget, enabled }: Props) {
           </div>
           }
           return (
-            <div className="p-8 text-left bg-[#583329] text-white rounded-md items-center flex flex-col " key={product.id} style={{boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px'}}>
+            <div className="p-8 text-left bg-[#583329]/90 text-white rounded-md items-center flex flex-col " key={product.id} style={{boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px'}}>
               {/* <h3 className="text-2xl font-bold">{product.name}</h3> */}
               <p className="text-sm text-white">{product.description}</p>
               <p className="my-4 text-center">
              
                  <span className="mt-4 text-xl font-bold ">{product.priceSol} $SOL </span>
-                {product.unitName && <span className="text-sm text-white-800 text-center"> /{product.unitName}   <span className="mt-1 text-xs  flex flex-col text-center ">({price} $USDC) </span> </span>}
+                {product.unitName && <span className="text-sm text-white-800 text-center"> /{product.unitName}   <span className="mt-1 text-xs  flex flex-col text-center ">({price * 0.5} $USDC) </span> </span>}
               </p>
               {/* <div className="mt-1" >
               
