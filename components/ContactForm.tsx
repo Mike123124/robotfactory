@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import PageHeading from "./PageHeading";
-const FORM_ENDPOINT = "https://public.herotofu.com/v1/23c47750-0318-11ed-bc36-e1ea9ccadd33"; 
+const FORM_ENDPOINT = "https://public.herotofu.com/v1/910981d0-05f1-11ed-be50-e78da9ee852d"; 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = () => {
