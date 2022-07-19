@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide input number spinners */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.test-back{
+  background-image: url("./assets/robotbackground.png");
+}
+.background-animate {
+  background-size: 400%;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  animation: AnimationName 3s ease infinite;
+}
+
+@keyframes AnimationName {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #f7f4ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #e0cbcb;
+    border-radius: 100vh;
+    border: 3px solid #f6f7ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #c0a0b9;
+  }
+}
+
+/* starts here */
+.image-style{
+  width: 150px
+}
+.container {
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom:0px;
+  width: 120%;
+  pointer-events: none;
+  
+  }
+  
+  .cat-image {
+    -webkit-user-drag: none;
+    width: 400px;
+    height: 200px;
+    top: -17px;
+    left: -2px;
+    position: absolute;
+    background-image: url("./assets/robotlogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  @keyframes fog {
+      from {right: 0px;}
+    
+      to {right: 150px; }
+    }
+
+    .robot{
+      display: inline-block;
+    height: 100%;
+    max-width:500px;
+    position: relative;
+    vertical-align: top;
+    }
+    .robot-container {
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-name: floating;
+      animation-name: floating;
+      -webkit-animation-play-state: running;
+      animation-play-state: running;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+      /* border-radius: 50%;
+      box-shadow: 0 5px 40px 0 rgba(23, 28, 33, 0.13),
+        0 20px 13px 0 rgba(23, 28, 33, 0.05); */
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      opacity: 1;
+      -webkit-transition: margin 1s cubic-bezier(0.2, 0.6, 0.3, 1), opacity 2s ease;
+      transition: margin 1s cubic-bezier(0.2, 0.6, 0.3, 1), opacity 2s ease;
+      animation-duration: 4s;
+      height: 144px;
+      margin-left: 0px;
+      margin-top: 5px;
+      position: absolute;
+      width: 144px;
+    }
+    @keyframes floating {
+      0% {
+        -webkit-transform: translateY(8px) rotate3d(0, 0, 1, 3deg);
+        transform: translateY(8px) rotate3d(0, 0, 1, 3deg);
+      }
+    
+      100% {
+        -webkit-transform: translateY(-8px) rotate3d(0, 0, 1, 0deg);
+        transform: translateY(-8px) rotate3d(0, 0, 1, 0deg);
+      }
+    }
+    .robot-icon {
+      width: 100px;
+      height: 100px;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-image: url("./assets/robotlogo.png");
+    }
+    
+  
