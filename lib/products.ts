@@ -4,7 +4,7 @@ export const products = [
     name: '1 month',
     description: ' A RPC node allows you to bypass the main Solana network and have your transactions processed much faster than an average transaction. ',
     unitName: 'Month', 
-    priceSol: 0.02,
+    priceSol: 0.5,
   },
   {
     disabled: 'true',
